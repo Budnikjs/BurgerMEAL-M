@@ -1,0 +1,84 @@
+.bg-img{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $activ-col;
+    top: -$main-width/0.596;
+    width: $main-width*2;
+    height: $main-width*2;
+    border-radius: 50%;
+}
+.header{
+    .banner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 466px;
+        .banner-inner{
+            display: flex;
+            align-items: center;
+            column-gap: 21px;
+            .banner-info{
+                display: flex;
+                flex-direction: column;
+                row-gap: 52px;
+                h1{
+                    font-weight: 800;
+                    font-size: 3.125rem;
+                    line-height: 120%;
+                    color: $white-text;
+                    span{
+                        font-size: 50px;
+                        color: $action-col-text;
+                    }                    
+                }                
+                a{                    
+                    color: $white-text;
+                    font-style: inherit;
+                    font-size: 1rem;
+                    &:hover{
+                        position: relative;
+                        top: 2px;
+                        color: $action-col-text;
+                    }
+                }
+            }
+        }
+    }
+}
+.nav{
+    width: 100%;
+    .nav-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        column-gap: 24px;
+        justify-content: start;
+        margin-top: 40px;
+        .nav__item{
+            .tab__btn{                        
+                padding: 9px 14px;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: row;
+                column-gap: 8px;
+                align-items: center;
+                justify-content: center;
+                &:hover{
+                    background: $activ-col;
+                }
+                &:focus{
+                    background: $activ-col;
+                }
+                &:active{
+                    transform: scale(0.98);
+                }
+            }
+        }
+    }
+}
+.logo__img:hover{
+    position: relative;
+    top: 2px;
+}

@@ -1,0 +1,264 @@
+.main{
+    width: 100%;
+    flex-grow: 1;
+}
+.item-title{
+    display: flex;
+    align-items: center;
+    margin-left: 26%;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 120%;
+    margin-top: 50px;
+}
+.goods-page{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+.tab-content{
+    position: relative;
+    width: calc(100% - 300px - 30px);
+}
+.tab-item{
+    display: none;
+    position: relative;
+    width: 100%; 
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.active-tab{
+    display: flex;
+    padding-bottom: 100px;
+}
+.nav__item{
+    .active-tab {
+        background: $activ-col;
+    }
+}
+    
+
+.product-card-wrap{    
+    position: relative;
+    width: 300px;
+    height: 411px;
+    background-color: $bg-col-fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    .product-card-img {
+        margin-bottom: 16px; 
+        .item__img {
+            border-radius: 12px;
+            width: 276px;
+            height: 220px;
+            object-fit: cover;
+        }
+    }
+    .product-card-conent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        .product-card-conent-top{
+            .item__cost {
+                font-weight: 600;
+                font-size: 2rem;
+                line-height: 100%;
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+            .item__name {
+                color: inherit;
+                font-weight: 400;
+                font-size: $main-font-size;
+                line-height: 130%;
+            }
+        }
+        .product-card-conent-bottom{
+            .item__wt {
+                font-weight: 600;
+                line-height: 130%;
+                color: $soft-col-text;
+                margin-bottom: 8px;
+            }
+        }
+    }
+    &:hover{
+        border-radius: 20px;
+        transform: scale(1.02);
+        box-shadow: 0 0 10px 2px $nt-active-btn;
+    }       
+}
+.btn-add-product{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $nt-active-btn;
+    color: $col-text;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 12px;
+    &:hover{
+        background-color: $action-col;
+        color: $white-text;
+    }
+    &:active{
+        transform: scale(0.975);
+    }
+}
+.basket-block{
+    display: flex;
+    flex-direction: column;        
+    border-radius: 18px;
+    width: 300px;
+    height: fit-content;
+    position: relative;
+    padding: 24px 16px;
+    background-color: $bg-col-fff;
+    margin-bottom: 100px;
+    .basket__title{
+        font-weight: 600;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        .basket__amount{
+            display: flex;
+            justify-content: center;
+            width: 41px;
+            background-color: $bg-col;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 400;
+        }
+    }
+    .basket__total-line{
+        font-weight: 400;
+        font-size: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 16px;
+        margin-bottom: 24px;
+        .total__amount{
+            display: flex;
+            justify-content: flex-end;
+            font-size: inherit;
+            font-weight: inherit;
+        }
+        border-top: 1.5px solid $nt-active-btn;
+    }    
+}
+
+.free-delivery__link{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    font-size: 0.75rem;
+    margin-top: 8px;
+    img{
+        margin-right: 8px;
+    }
+    &:hover{
+        position: relative;
+        border-radius: 6px;
+        top: 1px;
+    }
+}
+
+.basket-item{
+    display: flex;
+    align-items: center;
+    border-top: 1.5px solid $nt-active-btn;
+    .basket-item-product{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        width: 100%;
+        height: 52px + 2*16px;
+        img{
+            content: '';
+            border-radius: 8px;
+            width: 64px;
+            height: 52px;
+            background: url('./../../img/goods/burgers/meat_bomb_520.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 6px;
+            border: none;
+        }
+        .basket-item-product-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 52px;
+            .item__name {
+                display: block;
+                font-size: .75rem;
+                line-height: 1;
+                span{
+                    display: inline;
+                    font-size: .75rem;
+                    color: $soft-col-text;
+                }
+            }
+            .item__cost{
+                display: inline-block;
+                font-size: .75rem;
+                line-height: 1;
+                span{
+                    line-height: inherit;
+                }
+            }
+        }
+    }
+    .product-counter{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60px + 2*12px;
+        height: 22px +2*9px;
+        padding: 9px 12px;
+        border-radius: 12px;
+        background-color: $bg-col;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        span{
+            display: flex;
+            position: absolute;
+        }
+        .amount-les,
+        .amount-more{
+            cursor: pointer;
+            &:hover{
+                font-weight: bolder;
+            }
+            &:active{
+                font-weight: inherit;
+            }            
+        }
+        .amount-les{
+            left: 12px;
+        }
+        .amount-more{
+            right: 12px;
+        }
+    }
+}
+

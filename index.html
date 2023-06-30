@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourMeal</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon32x32.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="overlay-form-delivery" id="overlay-modal"></div>
+
+
+    <div class="wrapper">
+        
+        <div class="bg-img">
+        </div>
+        <div class="container">
+
+            <header class="header">
+
+                <div class="banner">
+                    <a href="#" class="logo__link">
+                        <img src="./img/logo.svg" alt="" class="logo__img">
+                    </a>
+                    <div class="banner-inner">
+                        <div class="banner-img">
+                            <img src="./img/burger-img.svg" alt="" class="banner__img">
+                        </div>
+                        <div class="banner-info">
+                            <h1 class="banner__slogan">Только самые </br><span>сочные бургеры!</span></h1>
+                            <a href="" class="even__link">Бесплатная доставка от 599₽</a>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav__item"><button data-tab="#tab-btn-yourMeal-1" type="button" class="tab__btn active-tab"><img src="./img/icon/icon-burger.svg" alt="">Бургеры</button></li>
+                        <li class="nav__item"><button data-tab="#tab-btn-yourMeal-2" type="button" class="tab__btn"><img src="./img/icon/icon-snacks.svg" alt="">Закуски</button></li>
+                        <li class="nav__item"><button data-tab="#tab-btn-yourMeal-3" type="button" class="tab__btn"><img src="./img/icon/icon-hot-dog.svg" alt="">Хот-доги</button></li>
+                        <li class="nav__item"><button data-tab="#tab-btn-yourMeal-4" type="button" class="tab__btn"><img src="./img/icon/icon-combo.svg" alt="">Комбо</button></li>
+                        <li class="nav__item"><button data-tab="#tab-btn-yourMeal-5" type="button" class="tab__btn"><img src="./img/icon/icon-shawarma.svg" alt="">Шаурма</button></li>
+                        <li class="nav__item"><button data-tab="#tab-btn-yourMeal-6" type="button" class="tab__btn"><img src="./img/icon/icon-pizza.svg" alt="">Пицца</button></li>
+                        <li class="nav__item"><button data-tab="#tab-btn-yourMeal-7" type="button" class="tab__btn"><img src="./img/icon/icon-wok.svg" alt="">Вок</button></li>
+                        <li class="nav__item"><button data-tab="#tab-btn-yourMeal-8" type="button" class="tab__btn"><img src="./img/icon/icon-donut.svg" alt="">Десерты</button></li>
+                        <li class="nav__item"><button data-tab="#tab-btn-yourMeal-9" type="button" class="tab__btn"><img src="./img/icon/icon-souse.svg" alt="">Соусы</button></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main class="main">
+
+                <div class="item-title"></div>
+
+                <div class="goods-page">
+                   
+                    <div class="basket-block">
+                        <h2 class="basket__title">Корзина<span class="basket__amount">0</span></h2>
+                        <ul class="basket-list">
+                            <li class="basket-item">
+                                <div class="basket-item-product">
+                                    <img alt="">
+                                    <div class="basket-item-product-info">
+                                        <h4 class="item__name">Мясная бомба</br><span class="product-cost-one">520</span><span> г</span></h4>
+                                        <h3 class="item__cost">689<span class="money-unit">₽</span></h3>
+                                    </div>
+                                </div>
+                                <div class="product-counter">
+                                    <span class="amount-les">-</span>
+                                    <span class="amount">1</span>
+                                    <span class="amount-more">+</span>
+                                </div>                                                                                    
+                            </li>
+                            <li class="basket-item">
+                                <div class="basket-item-product">
+                                    <img alt="">
+                                    <div class="basket-item-product-info">
+                                        <h4 class="item__name">Мясная бомба</br><span class="product-cost-one">520</span><span> г</span></h4>
+                                        <h3 class="item__cost">689<span class="money-unit">₽</span></h3>
+                                    </div>
+                                </div>
+                                <div class="product-counter">
+                                    <span class="amount-les">-</span>
+                                    <span class="amount">2</span>
+                                    <span class="amount-more">+</span>
+                                </div>                                                                                    
+                            </li>
+                        </ul>
+                        <p class="basket__total-line">Итого<span class="total__amount">₽</span></p>
+                        <button class="btn-add-product" id="placeanorderBasketBtn">Оформить заказ</button>
+                        <a href="#" class="free-delivery__link">
+                            <img src="./img/icon/icon-delivery.svg" alt="">
+                            Бесплатная доставка
+                        </a>
+                    </div>
+
+                    <div class="tab-content">
+                        <div id="tab-btn-yourMeal-1" class="tab-item active-tab">
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/burgers/meat_bomb_520.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>689</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Мясная бомба</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>520</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/burgers/super_cheese_512.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>550</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Супер сырный</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>512</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/burgers/heavy-hit.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>639</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Сытный</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>580</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/burgers/meat_bomb_520.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>480</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Тяжелый удар</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>470</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/burgers/eternal-classic.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>450</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Вечная классика</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>450</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/burgers/italy-one.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>560</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Итяльянский</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>510</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-btn-yourMeal-2" class="tab-item">
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/snaks/nachos.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>250</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Начос</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>220</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/snaks/fries.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>245</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Картошка фри</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>180</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/snaks/onion-rings.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>230</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Луковые кольца</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>160</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                   
+                        <div id="tab-btn-yourMeal-3" class="tab-item">
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/hot-dogs/homemade-hotdog.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>290</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Домашний хот-дог</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>250</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/hot-dogs/spicy-hotdog.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>239</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Жгучий хот-дог</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>245</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/hot-dogs/classic-hotdog.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>220</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Классический хот-дог</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>215</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                   
+                        <div id="tab-btn-yourMeal-4" class="tab-item">                            
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/combo/combo01.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>520</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Комбо сет №1</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>675</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/combo/combo02.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>620</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Комбо сет №2</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>750</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/combo/combo03.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>670</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Комбо сет №3</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>675</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>                   
+                        <div id="tab-btn-yourMeal-5" class="tab-item">
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/shawerma/shaurma01.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>200</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Шаурма с ветчиной</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>240</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/shawerma/shaurma02.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>180</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Шаурма классическая</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>240</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/shawerma/shaurma03.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>280</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Шаурма гриль с курицей</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>250</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/shawerma/shaurma04.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>250</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Шаурма "море овощей"</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>220</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/shawerma/shaurma05.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>170</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Шаурма "студенческий стандарт"</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>200</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>                   
+                        <div id="tab-btn-yourMeal-6" class="tab-item">
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/pizza/pizza-spicy.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>380</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Остренькая</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>300</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/pizza/pizza-everything.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>450</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Все, везде и сразу</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>330</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/pizza/pizza-margo.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>360</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Маргарита</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>300</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/pizza/pizza-oliva.jpg" alt="" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>400</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">С оливками</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>310</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/pizza/pizza-sosiges.jpg" alt="" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>340</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Пепперони</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>320</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/pizza/pizza-tongue.jpg" alt="" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>370</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Эзоп</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>320</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/pizza/pizza-vegan.jpg" alt="" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>340</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Веганская</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>310</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+
+                        </div>                   
+                        <div id="tab-btn-yourMeal-7" class="tab-item">
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/wok/wok-chily.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>375</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Вок на чиле</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>340</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/wok/wok-kunzut.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>350</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Вегетарианская</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>320</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/wok/wok-reachhour.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>430</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Верблюжий горб</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>350</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>                   
+                        <div id="tab-btn-yourMeal-8" class="tab-item">
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/donuts/berry.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>470</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Я-годный тортик</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>300</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/donuts/donuts-icecream.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>320</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Сила 2х пончиков</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>120 х 2</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/donuts/donuts-stars.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>530</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Звездная карта</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>120 х 6</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/donuts/potato-king.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>90</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">"Картошка"</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>80</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/donuts/yammy marcepan.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>360</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Марцепановый десертик</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>270</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/donuts/ummy-marcepan.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>470</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Марцепановый тортик</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>320</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>                   
+                        <div id="tab-btn-yourMeal-9" class="tab-item">
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/souses/cheese.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>100</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Сырный</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>80</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/souses/maio.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>70</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Майонез домашний</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>80</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/souses/pesto.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>150</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Соус-песто</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>80</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/souses/tartar.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>100</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Тартар</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>80</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="product-card-wrap">
+                                <div class="product-card-img">
+                                    <img src="./img/goods/souses/tomato-one.jpg" alt="Мясная бомба" class="item__img">
+                                </div>
+                                <div class="product-card-conent">
+                                    <div class="product-card-conent-top">
+                                        <h3 class="item__cost"><span>100</span><span class="money-unit">₽</span></h3>
+                                        <h4 class="item__name">Помидоровый-белорусский</h4>
+                                    </div>
+                                    <div class="product-card-conent-bottom">
+                                        <h4 class="item__wt"><span>120</span><span> г</span></h4>
+                                        <button class="btn-add-product">Добавить</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>                
+                    </div>
+
+                </div>
+                
+
+            </main>
+
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="contact-block">
+                    <div class="footer-logo">
+                        <a href="#">
+                            <img src="./img/logo-orange.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="contact-block-phone">
+                        <h4>Номер для заказа</h4>
+                        <span>+7(930)833-38-11</span>
+                    </div>
+                    <div class="contact-block-social">
+                        <h4>Мы в соцсетях</h4>
+                        <div class="icons">
+                            <a href="#" class="tovksite"><img src="./img/icon/vk-orange.svg" alt=""></a>
+                            <a href="#" class="totelegramsite"><img src="./img/icon/telegram.svg" alt=""></a>
+                        </div>
+                    </div>                                        
+                </div>
+                <h4 class="copyright">© YouMeal, 2022</h4>
+                <a href="#" class="copyright design-autor">Design: Anastasia Ilina</a>
+            </div>
+        </footer>
+
+    </div>
+    
+    <div class="form-delivery">
+
+            <div class="form-delivery-img">
+                <img class="form-delivery__img">
+            </div>
+
+            <div class="form-delivery-info">
+                <button class="form-delivery__close-delivery"></button>
+                <h3 class="form-delivery__title">Доставка</h3>
+                <input class="form-delivery__input form-delivery__input-name" type="text" placeholder="Ваше имя">
+                <input class="form-delivery__input form-delivery__input-phone" type="text" placeholder="Телефон">
+                <div class="form-delivery__radio-group">
+                    <input class="form-delivery__radio" type="radio" id="formDeliveryChoice_PickUp" name="deliveryGroupBtn" value="_PickUp" checked>
+                    <label for="formDeliveryChoice_PickUp">Самовывоз</label>
+                </div>
+                <div class="form-delivery__radio-group">
+                    <input class="form-delivery__radio" type="radio" id="formDeliveryChoice_Local" name="deliveryGroupBtn" value="_Local">
+                    <label for="formDeliveryChoice_Local">Доставка</label>
+                </div>
+                <div class="DeliveryChoice_Local">
+                    <div class="DeliveryChoice_Local__main-info">
+                        <input class="form-delivery__input" type="text" placeholder="Улица, дом, квартира">
+                    </div>
+                    <div class="DeliveryChoice_Local__detail-info">
+                        <input class="form-delivery__input local-detail" type="text" placeholder="Этаж">
+                        <input class="form-delivery__input local-detail" type="text" placeholder="Домофон">
+                    </div>                        
+                </div>
+                <button class="btn-add-product send-form-delivery-btn">Оформить</button>
+            </div>
+
+    </div>
+
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/tabs.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

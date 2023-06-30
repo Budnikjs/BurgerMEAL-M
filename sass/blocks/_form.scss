@@ -1,0 +1,156 @@
+.form-delivery{
+    position: fixed; /* фиксированное положение */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    background: rgba(0,0,0,0.5); /* цвет фона */
+    z-index: $z-ind-modal-overlay + 10;
+
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    padding: 0;
+
+
+    margin: 0 auto;
+    width: 684px;
+    height: 432px;
+
+    display: none;
+    pointer-events: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+    background-color: $bg-col;
+    
+    .form-delivery-img{
+        border-radius: 24px 0  0 24px;
+        width: 50%;
+        height: 100%;
+        background-color: $activ-col;
+        img{            
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-image: url(./../../img/form-donut.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            border-radius: 24px 0  0 24px;
+        }
+    }
+    .form-delivery-info{
+        width: 50%;
+        height: 100%;
+        padding: 44px 24px 24px 24px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .form-delivery__title{
+            color: $col-text;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+        .form-delivery__close-delivery{
+            position: absolute;
+            cursor: pointer;
+            top: 24px;
+            right: 24px;
+            width: 24px;
+            height: 24px;
+            background-image: url(./../../img/icon/close-icon.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            outline: none;
+            &:hover{
+                width: 26px;
+                height: 26px;
+            }
+            &:active{
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+    }
+}
+
+.form-delivery__input{
+    background-color: $bg-col-fff;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid $col-border;
+    width: 100%;
+    color: $col-text;
+    font-size: 0.75rem;
+    &:hover{
+        border: 1px solid $soft-col-text;
+    }
+}
+.DeliveryChoice_Local{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    visibility: hidden;
+    .DeliveryChoice_Local__detail-info{
+        display: flex;
+        flex-direction: row;
+        column-gap: 8px;
+    }
+}
+.form-delivery__radio-group{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    .form-delivery__radio{
+        width: 12px;
+        height: 12px;
+        accent-color: $col-border;
+        position: relative;
+        &:after {
+            width: 10px;
+            height: 10px;
+            border-radius: 12px;
+            top: -4.4px;
+            left: 0px;
+            position: relative;
+            background-color: $bg-col-fff;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 1px solid $col-border;
+        }
+        &:checked:after {
+            width: 6px;
+            height: 6px;
+            top: -5.0px;
+            left: 0.8px;
+            position: relative;
+            background-color: #000000;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2.4px solid $bg-col-fff;
+        }
+    }
+    label{
+        font-size: 0.75rem;
+        color: $col-text;
+    }
+}
+
+.overlay-form-delivery{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.8;
+    z-index: $z-ind-modal-overlay; //модалка использует эту переменную +1
+    visibility: hidden;
+}
